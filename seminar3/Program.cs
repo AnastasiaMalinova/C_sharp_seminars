@@ -2,24 +2,156 @@
 
 // 1е решение без метода
 // запрашиваем координаты
-Console.WriteLine("Введите координаты x: ");
-int x = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты y: ");
-int y = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координаты x: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координаты y: ");
+// int y = Convert.ToInt32(Console.ReadLine());
 
-if ( x > 0 && y > 0)
+// if ( x > 0 && y > 0)
+// {
+//     Console.WriteLine("Первая четверть");
+// }
+// else if ( x < 0 && y > 0)
+// {
+//     Console.WriteLine("Вторая четверть");
+// }
+// else if ( x < 0 && y < 0)
+// {
+//     Console.WriteLine("Третья четверть");
+// }
+// else if ( x > 0 && y < 0)
+// {
+//     Console.WriteLine("Четвертая четверть");
+// }
+// else 
+// {
+//     Console.WriteLine("Определить четверть не возможно")
+// }
+
+
+// 2-е решение с методом
+
+// Пример с методом void
+// void - метод ничего не возвращает, будет что-то проверять, какие-то действия может выполнить сам
+// написали название метода void
+// придумали название этого метода: printQuarter
+// передали  в него два значения, две переменных a и b
+// программа делится на две части, в первой будет описан метод void, во второй сама программа
+
+// void printQuarter(int a, int b)
+// {
+// if ( a > 0 && b > 0)
+// {
+//     Console.WriteLine("Первая четверть");
+// }
+// else if ( a < 0 && b > 0)
+// {
+//     Console.WriteLine("Вторая четверть");
+// }
+// else if ( a < 0 && b < 0)
+// {
+//     Console.WriteLine("Третья четверть");
+// }
+// else if ( a > 0 && b < 0)
+// {
+//     Console.WriteLine("Четвертая четверть");
+// }
+// else 
+// {
+//     Console.WriteLine("Определить четверть не возможно");
+// }
+// }
+
+
+// Console.WriteLine("Введите координаты x: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координаты y: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+
+// // последней строкой вызываем метод, описанный выше
+// printQuarter(x, y);
+// // вызываем метод, чтобы он взял значения x y и сохранил в свои переменные a b
+// // и с этими переменными продолжил работу внутри метода
+// // передвать в метод мы можем разные значения, он всегда будет преобразовывать это в свои переменные
+
+
+
+// // Пример с методом int, который возвращает значения
+
+// // в данному случае была бы другая функция, которая бы принимала значения, но делала return
+// // этот метод бы что-то возвращад, н-р return 1; и т.д.
+
+// int returnQuarter(int a, int b)
+// {
+//    if ( a > 0 && b > 0)
+// {
+//     return 1;
+// }
+// else if ( a < 0 && b > 0)
+// {
+//     return 2;
+// }
+// else if ( a < 0 && b < 0)
+// {
+//     return 3;
+// }
+// else if ( a > 0 && b < 0)
+// {
+//     return 4;
+// }
+// else 
+// {
+//     return 0;
+// } 
+// }
+// // в этому случе метод нужно сохранить в какую-то переменную, потому что функция что-то вернет
+// // или вывести ее на экран
+
+// Console.WriteLine("Введите координаты x: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координаты y: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+// // можно вывести значение функции на экран, чтобы увидеть // Console.WriteLine(returnQuarter(x, y));
+// // можно сохранить значение метода в переменную
+// // эту переменную потом можно тоже вывести на экран
+// int quater = returnQuarter(x, y);
+// // // выводим переменную на экран (если нужно) или производим с ней какие-то другие действия
+// Console.WriteLine($"Четверть: {quater}");
+
+
+// в качестве возвращающего метода используем int т.к работаем с целыми числами.
+// название метода в зависимости от типа данных 
+
+// Напишите программу, которая по заданному номеру четверти 
+// показывает возможный  диапазон координат точек в этой четверти (x и y)
+
+void searchRange (int a )
 {
-    Console.WriteLine("Первая четверть");
-}
-else if ( x < 0 && y > 0)
+    if (a = 1)
 {
-    Console.WriteLine("Вторая четверть");
+    Console.WriteLine(x > 0, y > 0);
 }
-else if ( x < 0 && y < 0)
+else if (a = 2)
 {
-    Console.WriteLine("Третья четверть");
+    Console.WriteLine(x < 0, y > 0);
 }
-else ( x > 0 && y < 0)
+else if (a = 3)
 {
-    Console.WriteLine("Четвертая четверть");
+    Console.WriteLine(x < 0, y < 0);
 }
+else if (a = 4)
+{
+    Console.WriteLine(x < 0, y < 0);
+}
+else 
+{
+    Console.WriteLine("Введено не корректное значение");
+}
+
+}
+
+Console.WriteLine("Введите название четверти координат от 1 до 4: ");
+int quarter = Convert.ToInt32(Console.ReadLine());
+
+
+
