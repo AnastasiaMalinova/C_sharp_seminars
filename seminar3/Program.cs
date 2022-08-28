@@ -125,23 +125,23 @@
 // Напишите программу, которая по заданному номеру четверти 
 // показывает возможный  диапазон координат точек в этой четверти (x и y)
 
-void searchRange (int a )
+void searchRange(int a)
 {
-    if (a = 1)
+    if (a == 1)
 {
-    Console.WriteLine(x > 0, y > 0);
+    Console.WriteLine("x > 0, y > 0");
 }
-else if (a = 2)
+else if (a == 2)
 {
-    Console.WriteLine(x < 0, y > 0);
+    Console.WriteLine("x < 0, y > 0");
 }
-else if (a = 3)
+else if (a == 3)
 {
-    Console.WriteLine(x < 0, y < 0);
+    Console.WriteLine("x < 0, y < 0");
 }
-else if (a = 4)
+else if (a == 4)
 {
-    Console.WriteLine(x < 0, y < 0);
+    Console.WriteLine("x < 0, y < 0");
 }
 else 
 {
@@ -152,6 +152,7 @@ else
 
 Console.WriteLine("Введите название четверти координат от 1 до 4: ");
 int quarter = Convert.ToInt32(Console.ReadLine());
+searchRange(quarter);
 
 
 
