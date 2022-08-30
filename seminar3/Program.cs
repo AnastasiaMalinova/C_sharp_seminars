@@ -125,34 +125,54 @@
 // Напишите программу, которая по заданному номеру четверти 
 // показывает возможный  диапазон координат точек в этой четверти (x и y)
 
-void searchRange(int a)
-{
-    if (a == 1)
-{
-    Console.WriteLine("x > 0, y > 0");
-}
-else if (a == 2)
-{
-    Console.WriteLine("x < 0, y > 0");
-}
-else if (a == 3)
-{
-    Console.WriteLine("x < 0, y < 0");
-}
-else if (a == 4)
-{
-    Console.WriteLine("x < 0, y < 0");
-}
-else 
-{
-    Console.WriteLine("Введено не корректное значение");
-}
+// 1й вариант
 
-}
+// void searchRange(int a)
+// {
+//     if (a == 1)
+// {
+//     Console.WriteLine("x > 0, y > 0");
+// }
+// else if (a == 2)
+// {
+//     Console.WriteLine("x < 0, y > 0");
+// }
+// else if (a == 3)
+// {
+//     Console.WriteLine("x < 0, y < 0");
+// }
+// else if (a == 4)
+// {
+//     Console.WriteLine("x < 0, y < 0");
+// }
+// else 
+// {
+//     Console.WriteLine("Введено не корректное значение");
+// }
 
-Console.WriteLine("Введите название четверти координат от 1 до 4: ");
-int quarter = Convert.ToInt32(Console.ReadLine());
-searchRange(quarter);
+// }
+// Console.WriteLine("Введите название четверти координат от 1 до 4: ");
+// int quarter = Convert.ToInt32(Console.ReadLine());
+// searchRange(quarter);
+
+// 2й вариант
+
+// void diapason (int q)
+// {
+//     switch (q)
+//     {
+//         case 1: Console.Write("x > 0, y > 0"); break;
+//         case 2: Console.Write("x > 0, y < 0"); break;
+//         case 3: Console.Write("x < 0, y < 0"); break;
+//         case 4: Console.Write("x < 0, y > 0"); break;
+//         default: Console.Write("Введено не корректное значение"); break;
+
+//     }
+// }
+
+// Console.WriteLine("Введите название четверти координат от 1 до 4: ");
+// int quarter = Convert.ToInt32(Console.ReadLine());
+// diapason(quarter);
 
 // Напишите программу, которая принимает на вход координаты двух точек 
 // и находит расстояние между ними в 2D пространстве
@@ -161,8 +181,56 @@ searchRange(quarter);
 // Math.sqrt поможет найти квадратный корень
 // Math.Pow найти степень
 
+// вводим переменную double тк квадратный корень дробное число из целого числа
+double lengthOtr(int a, int b, int c, int d)
+{
+    double l = Math.Sqrt(Math.Pow(a-c,2) + Math.Pow(b-d,2));
+    return l;
+} 
+Console.WriteLine("Зададим координаты двух точек A и B на координатах x и y.");
+Console.WriteLine("Введите координаты точки Xa: ");
+int Xa = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координаты точки Ya: ");
+int Ya = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координаты точки Xb: ");
+int Xb = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координаты точки Yb: ");
+int Yb = Convert.ToInt32(Console.ReadLine());
+lengthOtr(Xa, Xb, Ya, Yb);
+Console.WriteLine($"Расстояние между двумя точками равно: {lengthOtr(Xa, Xb, Ya, Yb):f2}");
+
+// если я хочу вывести две цифры после запятой, то f:2, если пять цифр после запятой то пишу F:5
+
 // Напишите программу, которая принимает на вход число (N) и выдает таблицу квадратов чисел от 1 до N
 // 5 -> 1, 4, 9, 16, 25.
 // 2 -> 1, 4.
+
+
+// void findQuarters(int a)
+// {
+//     int b = 1;
+//     while (b <= a)
+//     {
+//         Console.WriteLine(Math.Pow(b, 2));
+//         b++;
+//     }
+// }
+
+// Console.WriteLine("Введите любое число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// findQuarters(N);
+// Console.WriteLine($"Квадраты от 1 до заданного числа: {findQuarters}");
+
+// 2й вариант
+// Console.WriteLine("Введите число N: ");
+// int N = int.Parse(Console.ReadLine());
+
+// // (от какого значения, до какого значения, с каким шагом)
+// for (int i=1; i <= N; i++)
+// {
+//     Console.WriteLine(i*i);
+// }
+
+
 
 
